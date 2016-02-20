@@ -51,3 +51,7 @@ ro.qc.sdk.sensors.gestures=true
 
 # Wi-Fi
 wifi.interface=wlan0
+
+#Radio
+ro.telephony.default_network=0
+telephony.lteOnGsmDevice=0
