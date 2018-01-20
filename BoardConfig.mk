@@ -24,6 +24,9 @@ DEVICE_PATH := device/samsung/s3ve3g
 AUDIO_FEATURE_ENABLED_MULTI_VOICE_SESSIONS := true
 AUDIO_FEATURE_SAMSUNG_DUAL_SIM := true
 
+# Camera
+BOARD_GLOBAL_CFLAGS += -DCAMERA_VENDOR_L_COMPAT
+
 # Radio
 SIM_COUNT := 2
 LOCAL_CFLAGS += -DANDROID_MULTI_SIM
@@ -37,7 +40,7 @@ TARGET_INIT_VENDOR_LIB := libinit_s3ve3g
 TARGET_UNIFIED_DEVICE := true
 
 # Kernel
-BOARD_CUSTOM_BOOTIMG_MK := $(DEVICE_PATH)/mkbootimg.mk
+#BOARD_CUSTOM_BOOTIMG_MK := $(DEVICE_PATH)/mkbootimg.mk
 BOARD_KERNEL_BASE := 0x00000000
 BOARD_KERNEL_CMDLINE := console=null androidboot.console=null androidboot.hardware=qcom user_debug=23 msm_rtb.filter=0x37  androidboot.selinux=permissive androidboot.bootdevice=msm_sdcc.1
 BOARD_KERNEL_PAGESIZE := 2048
